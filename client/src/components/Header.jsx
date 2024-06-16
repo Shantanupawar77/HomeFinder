@@ -5,15 +5,15 @@ import {useSelector} from "react-redux"
 
 export const Header = () => {
   const {currentUser}=useSelector(state=>state.user)
-
+  
   return (
     <header className='bg-slate-200 shadow-md'>
         <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
         
         <h1 className='font-bold text-sm sm:text-xl flex flex-wrap' >
-            <span className='text-slate-500'>Shantanu</span>
-            <span className='text-red-700'>Estate</span>
+            <span className='text-slate-500'>Pratham</span>
+            <span className='text-red-700'>Realty</span>
         </h1>
         </Link>
 
