@@ -29,8 +29,8 @@ export const Header = () => {
         <Link to="/">
         
         <h1 className='font-bold text-sm sm:text-xl flex flex-wrap' >
-            <span className='text-slate-500'>Pratham</span>
-            <span className='text-red-700'>Realty</span>
+            <span className='text-slate-500'>Ghar</span>
+            <span className='text-red-700'>Khoj</span>
         </h1>
         </Link>
 

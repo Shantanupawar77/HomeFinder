@@ -20,6 +20,10 @@ export default function Contact({ listing }) {
     };
     fetchLandlord();
   }, [listing.userRef]);
+
+  const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${landlord?.email}&su=Regarding ${listing.name}&body=${message}`;
+
+  
   return (
     <>
       {landlord && (
@@ -39,12 +43,14 @@ export default function Contact({ listing }) {
             className='w-full border p-3 rounded-lg'
           ></textarea>
 
-          <Link
-          to={`mailto:${landlord.email}?subject=Regarding ${listing.name}&body=${message}`}
-          className='bg-slate-700 text-white text-center p-3 uppercase rounded-lg hover:opacity-95'
+          <a
+            href={gmailComposeLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-slate-700 text-white text-center p-3 uppercase rounded-lg hover:opacity-95'
           >
-            Send Message          
-          </Link>
+            Send Message
+          </a>
         </div>
       )}
     </>
